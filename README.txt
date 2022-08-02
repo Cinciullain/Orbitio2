@@ -1,4 +1,4 @@
-## Orbitio 2
+### Orbitio 2
 
 This mod is based on satellites orbiting the world.
 These satellites will have different function possibilities, some examples will be:

@@ -1,6 +1,7 @@
 package net.cinciullain.orbitio2;
 
 import com.mojang.logging.LogUtils;
+import net.cinciullain.orbitio2.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,9 @@ public class Orbitio2
     public Orbitio2()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //Registra gli item aggiunti alla classe ModItems
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

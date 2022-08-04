@@ -1,6 +1,7 @@
 {
   "_comment": "Struttura di dichiarazione della nomenclatura in gioco",
   "item.orbitio2.orbitio_item": "Orbitio Item",
+  "item.orbitio2.prova_item_custom": "Prova Item Custom",
 
   "block.orbitio2.orbitio_block": "Orbitio Block",
   "block.orbitio2.orbitio_block_experience": "Orbitio Block Experience",

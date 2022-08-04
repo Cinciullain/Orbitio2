@@ -1,7 +1,7 @@
 package net.cinciullain.orbitio2.block;
 
 import net.cinciullain.orbitio2.Orbitio2;
-import net.cinciullain.orbitio2.item.ModCreativeModeTab;
+import net.cinciullain.orbitio2.ModCreativeModeTab;
 import net.cinciullain.orbitio2.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;

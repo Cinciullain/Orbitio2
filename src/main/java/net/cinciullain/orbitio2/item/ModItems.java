@@ -1,7 +1,8 @@
 package net.cinciullain.orbitio2.item;
 
+import net.cinciullain.orbitio2.ModCreativeModeTab;
 import net.cinciullain.orbitio2.Orbitio2;
-import net.minecraft.world.item.CreativeModeTab;
+import net.cinciullain.orbitio2.item.custom.ProvaItemCustom;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,6 +28,9 @@ public class ModItems
      */
     public static final RegistryObject<Item> ORBITIO_ITEM = ITEMS.register("orbitio_item",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+
+    public static final RegistryObject<Item> PROVA_ITEM_CUSTOM = ITEMS.register("prova_item_custom",
+            () -> new ProvaItemCustom(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB).stacksTo(1)));
 
     //Registra gli item aggiunti alla classe ModItems
     public static void register(IEventBus eventBus)

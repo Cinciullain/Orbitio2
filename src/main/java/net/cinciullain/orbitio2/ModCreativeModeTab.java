@@ -1,5 +1,6 @@
-package net.cinciullain.orbitio2.item;
+package net.cinciullain.orbitio2;
 
+import net.cinciullain.orbitio2.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

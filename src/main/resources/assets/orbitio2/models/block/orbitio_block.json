@@ -1,0 +1,8 @@
+{
+  "_comment": "Struttura di dichiarazione di un blocco che punta alla texture + extra",
+  "parent": "block/cube_all",
+  "textures":
+  {
+    "layer0": "orbitio2:block/orbitio_block"
+  }
+}

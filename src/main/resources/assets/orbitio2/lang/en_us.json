@@ -2,5 +2,8 @@
   "_comment": "Struttura di dichiarazione della nomenclatura in gioco",
   "item.orbitio2.orbitio_item": "Orbitio Item",
 
+  "block.orbitio2.orbitio_block": "Orbitio Block",
+  "block.orbitio2.orbitio_block_experience": "Orbitio Block Experience",
+
   "itemGroup.orbitio2tab": "Orbitio 2"
 }

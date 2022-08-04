@@ -1,7 +1,8 @@
 {
   "_comment": "Struttura di dichiarazione di un item che punta alla texture + extra",
   "parent": "item/generated",
-  "textures": {
+  "textures":
+  {
     "layer0": "orbitio2:item/orbitio_item"
   }
 }

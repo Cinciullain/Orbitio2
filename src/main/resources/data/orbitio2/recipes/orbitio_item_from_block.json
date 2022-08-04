@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+          [
+            {
+              "item": "orbitio2:orbitio_block"
+            }
+          ],
+  "result":
+  {
+    "item": "orbitio2:orbitio_item",
+    "count": 9
+  }
+}

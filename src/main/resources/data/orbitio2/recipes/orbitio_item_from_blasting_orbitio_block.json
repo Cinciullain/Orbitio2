@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "cooktime": 100,
+  "experience": 0.7,
+  "group": "orbitio_item",
+  "ingredients":
+  {
+    "item": "orbitio2:orbitio_block"
+  },
+  "result": "orbitio2:orbitio_item"
+}

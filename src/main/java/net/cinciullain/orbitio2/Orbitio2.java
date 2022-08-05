@@ -3,6 +3,7 @@ package net.cinciullain.orbitio2;
 import com.mojang.logging.LogUtils;
 import net.cinciullain.orbitio2.block.ModBlocks;
 import net.cinciullain.orbitio2.item.ModItems;
+import net.cinciullain.orbitio2.villager.ModVillagers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,11 +29,14 @@ public class Orbitio2
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        //Registra gli item e aggiunti alla classe ModItems
+        //Registra gli item aggiunti alla classe ModItems
         ModItems.register(modEventBus);
 
-        //Registra i blocchi e aggiunti alla classe ModBlocks
+        //Registra i blocchi aggiunti alla classe ModBlocks
         ModBlocks.register(modEventBus);
+
+        //Registra i villager aggiunti alla classe ModVillagers
+        ModVillagers.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -44,9 +48,10 @@ public class Orbitio2
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        //Questa lambda gestisce la parte dei villager
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     /*

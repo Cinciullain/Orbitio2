@@ -1,0 +1,13 @@
+{
+  "variants":
+  {
+    "lit=true":
+    {
+      "model": "orbitio2:block/prova_blockstates_on"
+    },
+    "lit=false":
+    {
+      "model": "orbitio2:block/prova_blockstates_off"
+    }
+  }
+}

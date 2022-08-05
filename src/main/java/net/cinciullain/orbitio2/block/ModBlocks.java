@@ -3,6 +3,7 @@ package net.cinciullain.orbitio2.block;
 import net.cinciullain.orbitio2.Orbitio2;
 import net.cinciullain.orbitio2.ModCreativeModeTab;
 import net.cinciullain.orbitio2.block.custom.ProvaBlockCustom;
+import net.cinciullain.orbitio2.block.custom.ProvaBlockstates;
 import net.cinciullain.orbitio2.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -47,6 +48,11 @@ public class ModBlocks
     //Aggiunta del blocco custom
     public static final RegistryObject<Block> PROVA_BLOCK_CUSTOM = registerBlock("prova_block_custom",
             () -> new ProvaBlockCustom(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORBITIO_TAB);
+
+    //Aggiunta del blocco con stati
+    public static final RegistryObject<Block> PROVA_BLOCKSTATES = registerBlock("prova_blockstates",
+            () -> new ProvaBlockstates(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(blockState -> blockState.getValue(ProvaBlockstates.LIT) ? 15 : 0)), ModCreativeModeTab.ORBITIO_TAB);
 
     //Registra il blocco
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)

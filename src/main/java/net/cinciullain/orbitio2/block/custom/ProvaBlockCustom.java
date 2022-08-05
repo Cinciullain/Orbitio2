@@ -21,7 +21,6 @@ public class ProvaBlockCustom extends Block
         super(properties);
     }
 
-
     /*
     Azione eseguita al tasto destro sul blocco.
     Viene eseguita due volte sul serve e due sul client (Main e off hand)

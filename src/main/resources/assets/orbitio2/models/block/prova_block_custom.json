@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures":
+  {
+    "layer0": "orbitio2:block/prova_block_custom"
+  }
+}

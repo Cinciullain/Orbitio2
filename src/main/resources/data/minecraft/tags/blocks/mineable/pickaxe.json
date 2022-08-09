@@ -3,6 +3,10 @@
   "values":
   [
     "orbitio2:orbitio_block",
-    "orbitio2:orbitio_block_experience"
-  ]
+    "orbitio2:orbitio_block_experience",
+
+
+    "orbitio2:antenna_ricezione"
+  ],
+  "_comment": "TODO: il blocco antenna_ricezione deve essere spostato da pickaxe a un tool custom"
 }

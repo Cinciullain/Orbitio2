@@ -54,6 +54,18 @@ public class ModBlocks
             () -> new ProvaBlockstates(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()
                     .lightLevel(blockState -> blockState.getValue(ProvaBlockstates.LIT) ? 15 : 0)), ModCreativeModeTab.ORBITIO_TAB);
 
+
+    /**
+     * DA QUA PARTE LA AGGIUNTA EFFETTIVA DEI BLOCCHI DELLA MOD
+     *
+     * 1 - Antenna Ricezione: Gestione comunicazione con il satellite. TODO: Se avere GUI o no
+     * 2 -
+     */
+    public static final RegistryObject<Block> ANTENNA_RICEZIONE = registerBlock("antenna_ricezione",
+            () -> new ProvaBlockCustom(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORBITIO_TAB);
+
+
+
     //Registra il blocco
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {

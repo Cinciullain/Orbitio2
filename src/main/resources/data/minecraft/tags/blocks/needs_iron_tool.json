@@ -3,6 +3,8 @@
   "values":
   [
     "orbitio2:orbitio_block",
-    "orbitio2:orbitio_block_experience"
+    "orbitio2:orbitio_block_experience",
+
+    "orbitio2:antenna_ricezione"
   ]
 }

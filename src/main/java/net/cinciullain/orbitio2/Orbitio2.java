@@ -1,11 +1,8 @@
 package net.cinciullain.orbitio2;
 
-import com.mojang.logging.LogUtils;
 import net.cinciullain.orbitio2.block.ModBlocks;
-import net.cinciullain.orbitio2.item.ModItems;
+import net.cinciullain.orbitio2.item.Orbitio2Items;
 import net.cinciullain.orbitio2.villager.ModVillagers;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,24 +10,22 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Orbitio2.MODID)
 public class Orbitio2
 {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "orbitio2";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final String MODNAME = "Orbitio 2";
+
+    public static final CreativeTabOrbitio2 TAB_ORBITIO2 = new CreativeTabOrbitio2();
 
     public Orbitio2()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         //Registra gli item aggiunti alla classe ModItems
-        ModItems.register(modEventBus);
+        Orbitio2Items.register(modEventBus);
 
         //Registra i blocchi aggiunti alla classe ModBlocks
         ModBlocks.register(modEventBus);
@@ -72,9 +67,6 @@ public class Orbitio2
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }

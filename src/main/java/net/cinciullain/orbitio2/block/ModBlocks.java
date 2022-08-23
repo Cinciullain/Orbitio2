@@ -1,10 +1,9 @@
 package net.cinciullain.orbitio2.block;
 
 import net.cinciullain.orbitio2.Orbitio2;
-import net.cinciullain.orbitio2.ModCreativeModeTab;
 import net.cinciullain.orbitio2.block.custom.ProvaBlockCustom;
 import net.cinciullain.orbitio2.block.custom.ProvaBlockstates;
-import net.cinciullain.orbitio2.item.ModItems;
+import net.cinciullain.orbitio2.item.Orbitio2Items;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -39,20 +38,20 @@ public class ModBlocks
 
     //Aggiunta effettiva del blocco
      public static final RegistryObject<Block> ORBITIO_BLOCK = registerBlock("orbitio_block",
-             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORBITIO_TAB);
+             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), Orbitio2.TAB_ORBITIO2);
 
     //Aggiunta effettiva dell'item associato al blocco ma con drop di esperienza
     public static final RegistryObject<Block> ORBITIO_BLOCK_EXPERIENCE = registerBlock("orbitio_block_experience",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(),UniformInt.of(3, 7)), ModCreativeModeTab.ORBITIO_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(),UniformInt.of(3, 7)), Orbitio2.TAB_ORBITIO2);
 
     //Aggiunta del blocco custom
     public static final RegistryObject<Block> PROVA_BLOCK_CUSTOM = registerBlock("prova_block_custom",
-            () -> new ProvaBlockCustom(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORBITIO_TAB);
+            () -> new ProvaBlockCustom(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), Orbitio2.TAB_ORBITIO2);
 
     //Aggiunta del blocco con stati
     public static final RegistryObject<Block> PROVA_BLOCKSTATES = registerBlock("prova_blockstates",
             () -> new ProvaBlockstates(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()
-                    .lightLevel(blockState -> blockState.getValue(ProvaBlockstates.LIT) ? 15 : 0)), ModCreativeModeTab.ORBITIO_TAB);
+                    .lightLevel(blockState -> blockState.getValue(ProvaBlockstates.LIT) ? 15 : 0)), Orbitio2.TAB_ORBITIO2);
 
 
     /**
@@ -62,7 +61,7 @@ public class ModBlocks
      * 2 -
      */
     public static final RegistryObject<Block> ANTENNA_RICEZIONE = registerBlock("antenna_ricezione",
-            () -> new ProvaBlockCustom(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ORBITIO_TAB);
+            () -> new ProvaBlockCustom(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()), Orbitio2.TAB_ORBITIO2);
 
 
 
@@ -77,7 +76,7 @@ public class ModBlocks
     //Registra l'item legato al blocco in gioco
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab)
     {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return Orbitio2Items.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
     public static void register(IEventBus eventBus)

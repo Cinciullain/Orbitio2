@@ -1,6 +1,5 @@
 package net.cinciullain.orbitio2.item;
 
-import net.cinciullain.orbitio2.ModCreativeModeTab;
 import net.cinciullain.orbitio2.Orbitio2;
 import net.cinciullain.orbitio2.item.custom.ProvaItemCustom;
 import net.minecraft.world.item.Item;
@@ -12,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 /*
 Classe necessaria per l'aggiunta di Items
  */
-public class ModItems
+public class Orbitio2Items
 {
 
     public static final DeferredRegister<Item> ITEMS =
@@ -27,10 +26,10 @@ public class ModItems
         - models file
      */
     public static final RegistryObject<Item> ORBITIO_ITEM = ITEMS.register("orbitio_item",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     public static final RegistryObject<Item> PROVA_ITEM_CUSTOM = ITEMS.register("prova_item_custom",
-            () -> new ProvaItemCustom(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB).stacksTo(1)));
+            () -> new ProvaItemCustom(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2).stacksTo(1)));
 
     /******************************************************/
     /*                      ITEMS                         */
@@ -39,34 +38,34 @@ public class ModItems
     /****************** MODULI SATELLITE ******************/
 
     public static final RegistryObject<Item> MODULO_SATELLITE_BASE = ITEMS.register("modulo_satellite_base",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     public static final RegistryObject<Item> MODULO_SATELLITE_BLOCKS = ITEMS.register("modulo_satellite_blocks",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     public static final RegistryObject<Item> MODULO_SATELLITE_ENTITIES = ITEMS.register("modulo_satellite_entities",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     /* Al momento superfluo, deciderò in futuro se aggiungerlo
 
     public static final RegistryObject<Item> MODULO_SATELLITE_OCEAN_DUNGEON = ITEMS.register("modulo_satellite_ocean_dungeon",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
     */
 
     public static final RegistryObject<Item> MODULO_SATELLITE_PILLAGERS = ITEMS.register("modulo_satellite_pillagers",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     /* Al momento superfluo, deciderò in futuro se aggiungerlo
 
     public static final RegistryObject<Item> MODULO_SATELLITE_PLAYERS = ITEMS.register("modulo_satellite_players",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
     */
 
     public static final RegistryObject<Item> MODULO_SATELLITE_PORTALE_END = ITEMS.register("modulo_satellite_portale_end",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     public static final RegistryObject<Item> MODULO_SATELLITE_VILLAGERS = ITEMS.register("modulo_satellite_villagers",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ORBITIO_TAB)));
+            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
 
     /******************************************************/
     /*                      ITEMS END                     */

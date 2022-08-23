@@ -2,7 +2,7 @@ package net.cinciullain.orbitio2.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.cinciullain.orbitio2.Orbitio2;
-import net.cinciullain.orbitio2.item.ModItems;
+import net.cinciullain.orbitio2.item.Orbitio2Items;
 import net.cinciullain.orbitio2.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
@@ -25,7 +25,7 @@ public class ModEvents
         if(tradesEvent.getType() == VillagerProfession.TOOLSMITH)
         {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = tradesEvent.getTrades();
-            ItemStack stack = new ItemStack(ModItems.PROVA_ITEM_CUSTOM.get(), 1);
+            ItemStack stack = new ItemStack(Orbitio2Items.PROVA_ITEM_CUSTOM.get(), 1);
 
             int villagerLevel = 1;
 
@@ -37,7 +37,7 @@ public class ModEvents
         if(tradesEvent.getType() == ModVillagers.PROVA_MASTER.get())
         {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = tradesEvent.getTrades();
-            ItemStack stack = new ItemStack(ModItems.ORBITIO_ITEM.get(), 15);
+            ItemStack stack = new ItemStack(Orbitio2Items.ORBITIO_ITEM.get(), 15);
 
             int villagerLevel = 1;
 

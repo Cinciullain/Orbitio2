@@ -13,8 +13,16 @@
   "itemGroup.orbitio2tab": "Orbitio 2",
 
   "_comment": "INIZIO DICHIARAZIONI EFFETTIVE",
+  "_comment": "******************************",
 
   "_comment": "BLOCCHI DELLA MOD",
-  "block.orbitio2.antenna_ricezione": "Communication Antenna"
+  "block.orbitio2.antenna_ricezione": "Communication Antenna",
 
+  "_comment": "ITEMS DELLA MOD",
+  "item.orbitio2.modulo_satellite_base": "Base Module",
+  "item.orbitio2.modulo_satellite_blocks": "Blocks Module",
+  "item.orbitio2.modulo_satellite_entities": "Entities Module",
+  "item.orbitio2.modulo_satellite_pillagers": "Pillagers Module",
+  "item.orbitio2.modulo_satellite_portale_end": "End Portal Module",
+  "item.orbitio2.modulo_satellite_villagers": "Villagers Module"
 }

@@ -1,0 +1,21 @@
+{
+  "_comment": "Recipe esempio shaped. Altre recipes o oggetti si possono trovare in: External Libraries -> net.minecraft:client:extra",
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "###",
+    "###",
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "orbitio2:orbitio_item"
+    }
+  },
+  "result":
+  {
+    "item": "orbitio2:modulo_satellite_blocks"
+  }
+}

@@ -30,7 +30,7 @@ Ogni blocco deve poi avere un json in:
         - block
     -
  */
-public class ModBlocks
+public class Orbitio2Blocks
 {
 
     public static final DeferredRegister<Block> BLOCKS =

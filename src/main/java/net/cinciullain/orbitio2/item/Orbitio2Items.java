@@ -2,6 +2,7 @@ package net.cinciullain.orbitio2.item;
 
 import net.cinciullain.orbitio2.Orbitio2;
 import net.cinciullain.orbitio2.item.custom.ProvaItemCustom;
+import net.cinciullain.orbitio2.item.custom.SatelliteBase;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -66,6 +67,14 @@ public class Orbitio2Items
 
     public static final RegistryObject<Item> MODULO_SATELLITE_VILLAGERS = ITEMS.register("modulo_satellite_villagers",
             () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2)));
+
+    /********************* SATELLITI **********************/
+
+//    public static final RegistryObject<Item> SATELLITE_BASE = ITEMS.register("satellite_base",
+//            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2).stacksTo(1)));
+
+    public static final RegistryObject<Item> SATELLITE_BASE = ITEMS.register("satellite_base",
+            () -> new SatelliteBase(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2).stacksTo(1)));
 
     /******************************************************/
     /*                      ITEMS END                     */

@@ -10,10 +10,13 @@
 
   "entity.minecraft.villager.orbitio2.prova_master": "Villager prova",
 
-  "itemGroup.orbitio2tab": "Orbitio 2",
+
 
   "_comment": "INIZIO DICHIARAZIONI EFFETTIVE",
   "_comment": "******************************",
+
+  "_comment": "GUI DELLA MOD",
+  "itemGroup.orbitio2tab": "Orbitio 2",
 
   "_comment": "BLOCCHI DELLA MOD",
   "block.orbitio2.antenna_ricezione": "Communication Antenna",
@@ -24,5 +27,7 @@
   "item.orbitio2.modulo_satellite_entities": "Entities Module",
   "item.orbitio2.modulo_satellite_pillagers": "Pillagers Module",
   "item.orbitio2.modulo_satellite_portale_end": "End Portal Module",
-  "item.orbitio2.modulo_satellite_villagers": "Villagers Module"
+  "item.orbitio2.modulo_satellite_villagers": "Villagers Module",
+
+  "item.orbitio2.satellite_base": "Base Satellite"
 }

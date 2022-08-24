@@ -2,7 +2,7 @@ package net.cinciullain.orbitio2.villager;
 
 import com.google.common.collect.ImmutableSet;
 import net.cinciullain.orbitio2.Orbitio2;
-import net.cinciullain.orbitio2.block.ModBlocks;
+import net.cinciullain.orbitio2.block.Orbitio2Blocks;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -27,7 +27,7 @@ public class ModVillagers
     maxTickets: quanti utilizzi l'oggetto può avere
      */
     public static final RegistryObject<PoiType> PROVA_BLOCK_CUSTOM_POI = POI_TYPES.register("prova_block_custom_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.PROVA_BLOCK_CUSTOM.get().getStateDefinition().getPossibleStates()), 1, 1));
+            () -> new PoiType(ImmutableSet.copyOf(Orbitio2Blocks.PROVA_BLOCK_CUSTOM.get().getStateDefinition().getPossibleStates()), 1, 1));
 
     public static final RegistryObject<VillagerProfession> PROVA_MASTER = VILLAGER_PROFESSIONS.register("prova_master",
             () -> new VillagerProfession("prova_master", x -> x.get() == PROVA_BLOCK_CUSTOM_POI.get(),

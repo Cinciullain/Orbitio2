@@ -1,6 +1,6 @@
 package net.cinciullain.orbitio2;
 
-import net.cinciullain.orbitio2.block.ModBlocks;
+import net.cinciullain.orbitio2.block.Orbitio2Blocks;
 import net.cinciullain.orbitio2.item.Orbitio2Items;
 import net.cinciullain.orbitio2.villager.ModVillagers;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,8 +27,8 @@ public class Orbitio2
         //Registra gli item aggiunti alla classe ModItems
         Orbitio2Items.register(modEventBus);
 
-        //Registra i blocchi aggiunti alla classe ModBlocks
-        ModBlocks.register(modEventBus);
+        //Registra i blocchi aggiunti alla classe Orbitio2Blocks
+        Orbitio2Blocks.register(modEventBus);
 
         //Registra i villager aggiunti alla classe ModVillagers
         ModVillagers.register(modEventBus);

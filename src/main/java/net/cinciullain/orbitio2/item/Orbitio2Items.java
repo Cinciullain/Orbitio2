@@ -70,9 +70,6 @@ public class Orbitio2Items
 
     /********************* SATELLITI **********************/
 
-//    public static final RegistryObject<Item> SATELLITE_BASE = ITEMS.register("satellite_base",
-//            () -> new Item(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2).stacksTo(1)));
-
     public static final RegistryObject<Item> SATELLITE_BASE = ITEMS.register("satellite_base",
             () -> new SatelliteBase(new Item.Properties().tab(Orbitio2.TAB_ORBITIO2).stacksTo(1)));
 

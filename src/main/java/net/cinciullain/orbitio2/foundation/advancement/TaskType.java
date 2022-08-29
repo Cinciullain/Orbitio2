@@ -18,7 +18,8 @@ public enum TaskType
     private boolean announce;
     private boolean hide;
 
-    TaskType(FrameType frameType, boolean toast, boolean announce, boolean hide) {
+    TaskType(FrameType frameType, boolean toast, boolean announce, boolean hide)
+    {
         this.frameType = frameType;
         this.toast = toast;
         this.announce = announce;

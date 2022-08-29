@@ -9,13 +9,30 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 version = '0.0.1'
 group = 'cinciullain.orbitio2'
 archivesBaseName = 'orbitio2'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(version_java)
+//shade start
+configurations {
+    shade
+}
+
+shadowJar {
+    configurations = [project.configurations.shade]
+    relocate 'com.tterrag.registrate', 'com.mymod.repack.registrate'
+}
+
+reobf {
+    shadowJar {}
+}
+
+//shade end
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(java_version)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
@@ -107,21 +124,21 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    // Put repositories for dependencies here
-    // ForgeGradle automatically adds the Forge maven and Maven Central for you
-
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    // flatDir {
-    //     dir 'libs'
-    // }
+    maven { // Registrate
+        url "https://maven.tterrag.com/"
+    }
+    mavenLocal()
 }
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19-41.1.0'
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
+    def registrate = "com.tterrag.registrate:Registrate:MC${minecraft_version}-${registrate_version}"
+    implementation fg.deobf(registrate)
+    shade registrate
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency

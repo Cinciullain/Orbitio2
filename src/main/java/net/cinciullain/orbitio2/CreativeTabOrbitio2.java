@@ -17,7 +17,7 @@ public class CreativeTabOrbitio2 extends CreativeModeTab
     @NotNull
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(Orbitio2Items.MODULO_SATELLITE_BASE.get());
+        return new ItemStack(Orbitio2Items.SATELLITE_BASE.get());
     }
 
 }

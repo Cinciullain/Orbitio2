@@ -1,5 +1,6 @@
 package net.cinciullain.orbitio2;
 
+import com.tterrag.registrate.Registrate;
 import net.cinciullain.orbitio2.block.Orbitio2Blocks;
 import net.cinciullain.orbitio2.item.Orbitio2Items;
 import net.cinciullain.orbitio2.villager.ModVillagers;
@@ -17,6 +18,7 @@ public class Orbitio2
 {
     public static final String MODID = "orbitio2";
     public static final String MODNAME = "Orbitio 2";
+    public static final Registrate REGISTRATE = Registrate.create(MODID);
 
     public static final CreativeTabOrbitio2 TAB_ORBITIO2 = new CreativeTabOrbitio2();
 

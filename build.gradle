@@ -1,8 +1,3 @@
-import groovy.json.JsonOutput
-import groovy.json.JsonSlurper
-import net.minecraftforge.gradle.common.tasks.SignJar
-import org.gradle.work.Incremental
-
 plugins {
     id 'eclipse'
     id 'java'

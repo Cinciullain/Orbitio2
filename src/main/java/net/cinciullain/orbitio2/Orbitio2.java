@@ -2,6 +2,7 @@ package net.cinciullain.orbitio2;
 
 import com.tterrag.registrate.Registrate;
 import net.cinciullain.orbitio2.block.Orbitio2Blocks;
+import net.cinciullain.orbitio2.foundation.advancement.AllAdvancements;
 import net.cinciullain.orbitio2.item.Orbitio2Items;
 import net.cinciullain.orbitio2.villager.ModVillagers;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +35,8 @@ public class Orbitio2
 
         //Registra i villager aggiunti alla classe ModVillagers
         ModVillagers.register(modEventBus);
+
+        AllAdvancements.register();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

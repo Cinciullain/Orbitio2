@@ -9,6 +9,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 
+import java.util.function.UnaryOperator;
+
 //TODO: aggiungere texture background
 public class Orbitio2Advancement
 {
@@ -18,6 +20,10 @@ public class Orbitio2Advancement
     private Orbitio2Advancement parent;
     private Advancement.Builder forgeBuilder;
 
+    public Orbitio2Advancement(String advID, UnaryOperator<AdvancementBuilder> builder) {
+        this.advID = advID;
+        this.forgeBuilder = Advancement.Builder.advancement();
+    }
 
     class AdvancementBuilder
     {
